@@ -1,11 +1,1 @@
-from turtle import *
-
-
-pensize(5)
-
-
-while True:
-    forward(4)
-    left(1)
-    right(1)
- 
+print('My name is Ruslan and student id is 202312294') 
