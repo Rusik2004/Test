@@ -1,6 +1,5 @@
 while True:
     user_input = input("Please enter a string (or 'done' to exit): ")
-    
     if user_input == 'done':
         print("Bye!")
         break
