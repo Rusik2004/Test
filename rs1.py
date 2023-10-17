@@ -1,12 +1,9 @@
 while True:
     user_input = input("Please enter two words (or 'done' to exit): ").strip().lower()
-    
     if user_input == 'done' or not user_input:
         print("-- bye !!")
         break
-    
     words = user_input.split()
-    
     if len(words) == 1:
         word1 = word2 = words[0]
     elif len(words) == 2:
