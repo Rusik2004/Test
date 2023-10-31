@@ -1,8 +1,5 @@
-
-    
 file_name = "mbox.txt"  
 email_hosts = {}
-
 with open(file_name, 'r') as file:
         for line in file:
             if line.startswith("From:"):
