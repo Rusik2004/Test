@@ -1,20 +1,21 @@
-while True:
-    user_input = input("Please enter two words (or 'done' to exit): ").strip().lower()
-    if user_input == 'done' or not user_input:
-        print("-- bye !!")
-        break
-    words = user_input.split()
-    if len(words) == 1:
-        word1 = word2 = words[0]
-    elif len(words) == 2:
-        word1, word2 = words[0], words[1]
+def chop(lst):
+    if len(lst) >= 2:
+        del lst[0]
+        del lst[-1]
+
+def middle(lst):
+    if len(lst) >= 2:
+        return lst[1:-1]
     else:
-        print("Invalid input. Please enter one or two words.")
-        continue
-    
-    if word1 < word2:
-        print(f"{word1} comes first")
-    elif word2 < word1:
-        print(f"{word2} comes first")
-    else:
-        print("The words are the same.")
+        return []
+
+my_list = [1, 2, 3, 4]
+
+print("my list before calling chop function =>", my_list)
+chop(my_list)
+print("my list after calling chop function =>", my_list)
+my_list = [1, 2, 3, 4]
+print("\nmy list before calling middle function =>", my_list)
+new_list = middle(my_list)
+print("my list after calling middle function =>", my_list)
+print("new list after calling middle function =>", new_list)

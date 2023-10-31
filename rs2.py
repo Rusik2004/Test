@@ -1,8 +1,17 @@
-user_input = input("Enter a string: ")
-print("Input string =", user_input)
+file_name = "romeo.txt"
+word_list = []
 
-index = len(user_input) - 1
+try:
+    with open(file_name, "r") as file:
+        for line in file:
+            words = line.split()
+            for word in words:
+                if word not in word_list:
+                    word_list.append(word)
+    word_list.sort()
+    print(word_list)
 
-while index >= 0:
-    print(user_input[index])
-    index -= 1
+except FileNotFoundError:
+    print(f"File '{file_name}' not found.")
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
